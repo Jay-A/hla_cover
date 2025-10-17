@@ -1,7 +1,0 @@
-hla\_solver.selectors module
-============================
-
-.. automodule:: hla_solver.selectors
-   :members:
-   :undoc-members:
-   :show-inheritance:

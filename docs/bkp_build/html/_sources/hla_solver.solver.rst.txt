@@ -1,7 +1,0 @@
-hla\_solver.solver module
-=========================
-
-.. automodule:: hla_solver.solver
-   :members:
-   :undoc-members:
-   :show-inheritance:

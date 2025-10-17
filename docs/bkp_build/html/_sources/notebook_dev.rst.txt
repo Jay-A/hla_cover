@@ -1,8 +1,0 @@
-Files for developement in Jupyter Notebooks
-===========================================
-
-This directory contains example .ipynb file for developement and usage within a Jupyter environment.
-
-Contents:
-
-- `prototype_dev.ipynb`: Jupyter-Notebook with description of usage.

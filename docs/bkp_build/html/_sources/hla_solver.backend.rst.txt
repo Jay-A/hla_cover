@@ -1,7 +1,0 @@
-hla\_solver.backend module
-==========================
-
-.. automodule:: hla_solver.backend
-   :members:
-   :undoc-members:
-   :show-inheritance:

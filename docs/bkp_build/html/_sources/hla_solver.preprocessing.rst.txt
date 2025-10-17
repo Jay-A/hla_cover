@@ -1,7 +1,0 @@
-hla\_solver.preprocessing module
-================================
-
-.. automodule:: hla_solver.preprocessing
-   :members:
-   :undoc-members:
-   :show-inheritance:
