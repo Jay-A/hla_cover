@@ -9,8 +9,8 @@ A modular, configurable, and Jupyter-safe prototype for solving greedy HLA allel
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/hla_solver_prototype.git
-cd hla_solver_prototype
+git clone https://github.com/Jay-A/hla_cover.git
+cd hla_cover
 ```
 
 ### 2. Install dependencies
@@ -26,25 +26,34 @@ pip install -r requirements.txt
 Edit `config.yaml` to define:
 - Dataset path
 - Number of iterations
-- Backend: `serial`, `threads`, or `processes`
+- Backend: `serial`, `thread_pool`, or `process_pool`
 - Verbosity, parallel workers, etc.
 
-### 4. Run from CLI
+### 4. Or develop in a Jupyter notebook
 
-```bash
-python run.py --config config.yaml
-```
-
-### 5. Or develop in a Jupyter notebook
-
-Inside `notebook_dev/prototype_dev.ipynb`, import the solver class and call:
+Inside `notebook_dev/prototype_dev.ipynb`, import the solver class and instantiate:
 
 ```python
-from hla_solver.solver import HLASolver
-solver = HLASolver.from_yaml("config.yaml")
-solver.run()
+import sys, os
+
+# Set up project root path
+project_root = os.path.abspath(os.path.join(os.getcwd(), ".."))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from hla_solver import HLASolver
+
+# Path to config file
+config_path = os.path.join(project_root, "configs", "cover_serial_config.yaml")
+solver = HLASolver(config_path)
 ```
 
+The solver object may now be used to freshly begin the problem defined in the config file or be used to restart from a restart\_state file:
+```python
+best_filters = solver.run()
+# or if restarting:
+best_filters = solver.run(restart_file="<path/to/restart/file.csv")
+```
 ---
 
 ## Configuration Options (`config.yaml`)
@@ -52,17 +61,29 @@ solver.run()
 Example:
 
 ```yaml
-dataset: "hla_alleles_smallDataset.csv"
-number_doubles: 0
+# configs/config.yaml
 
 solver:
-  max_iter: 10
-  top_n: 1
+  max_iter: 15
+  top_n: 3
   top_k_global: 3
+
+data:
+  dataset_path: "data/simulated_HLA_samples_20000.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "serial"
+  num_workers: 1
+  
+logging:
   verbose: true
-  backend: "threads"         # "serial", "threads", or "processes"
-  num_workers: 4
-  progress_mode: "progress_bar"  # "silent", "per_worker", or "progress_bar"
+  enable_timing: true
+  progress_mode: progress_bar
+  log_dir: "logs"
+
+warnings:
+  warn_process_pool_in_ipynb: true  
 ```
 
 ---
