@@ -29,7 +29,7 @@ Edit `config.yaml` to define:
 - Backend: `serial`, `thread_pool`, or `process_pool`
 - Verbosity, parallel workers, etc.
 
-### 4. Or develop in a Jupyter notebook
+### 4. Run in a Jupyter notebook
 
 Inside `notebook_dev/prototype_dev.ipynb`, import the solver class and instantiate:
 
@@ -87,6 +87,13 @@ warnings:
 ```
 
 ---
+### 5. Or, run from terminal:
+
+Navigate to project root directory and then use the `run_solver.py` script to launch the solver with the prepackaged serial config file:
+```python
+python run_solver.py -c configs\cmd_cover_serial_config.yaml
+```
+---
 
 ## Project Structure
 
@@ -102,7 +109,7 @@ See [`PROJECT_STRUCTURE.md`](PROJECT_STRUCTURE.md) for full directory layout and
 
 ---
 
-## 📄 License
+## License
 
 BSD 2-Clause License
 
