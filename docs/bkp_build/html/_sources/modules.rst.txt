@@ -1,0 +1,7 @@
+hla_solver
+==========
+
+.. toctree::
+   :maxdepth: 4
+
+   hla_solver

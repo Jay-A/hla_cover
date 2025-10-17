@@ -1,0 +1,13 @@
+# config.yaml
+
+dataset: "data/hla_alleles_smallDataset.csv"
+number_doubles: 0
+
+solver:
+  max_iter: 10
+  top_n: 1
+  top_k_global: 3
+  verbose: true
+  backend: "serial"            # Run serially in notebook (safe for Jupyter)
+  num_workers: 1               # Not used for serial, but kept for uniformity
+  progress_mode: "per_worker"  # Options: per_worker, progress_bar, silent

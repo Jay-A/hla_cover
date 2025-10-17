@@ -1,0 +1,24 @@
+hla\_solver package
+===================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   hla_solver.backend
+   hla_solver.greedy
+   hla_solver.preprocessing
+   hla_solver.selectors
+   hla_solver.solver
+   hla_solver.utils
+   hla_solver.validation
+
+Module contents
+---------------
+
+.. automodule:: hla_solver
+   :members:
+   :undoc-members:
+   :show-inheritance:

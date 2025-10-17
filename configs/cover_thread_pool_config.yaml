@@ -1,0 +1,31 @@
+# configs/cover_thread_pool_config.yaml
+
+meta:
+  simulation_name: "threadpool_run_20k_debug"
+  author: "Author Name"
+  date: "2025-10-14"
+  notes: "Any notes about the simulation"
+  
+solver:
+  max_iter: 5
+  top_n: 3
+  top_k_global: 3
+
+data:
+  dataset_path: "../data/simulated_HLA_samples_20000.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "thread_pool"
+  num_workers: 4
+  local_bests_count: 3  
+
+logging:
+  verbose: true
+  enable_timing: true
+  progress_mode: progress_bar
+  log_dir: "../logs"
+
+warnings:
+  warn_process_pool_in_ipynb: false  # Not applicable to threads, so disable
+

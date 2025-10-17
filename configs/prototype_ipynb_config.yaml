@@ -1,0 +1,21 @@
+# configs/prototype_ipynb_config.yaml
+
+solver:
+  max_iter: 10
+  top_n: 1
+  top_k_global: 5
+
+data:
+  dataset_path: "../data/hla_alleles_smallDataset.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "serial"      # Options: serial, thread, process
+  num_workers: 1      # Only used if mode is thread or process
+
+logging:
+  verbose: true
+  progress_mode: "silent"   # Options: progress_bar, per_worker, silent
+
+warnings:
+  warn_process_pool_in_ipynb: true

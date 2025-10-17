@@ -1,0 +1,7 @@
+hla\_solver.greedy module
+=========================
+
+.. automodule:: hla_solver.greedy
+   :members:
+   :undoc-members:
+   :show-inheritance:

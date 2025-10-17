@@ -1,0 +1,30 @@
+# configs/cover_serial_config.yaml
+
+meta:
+  simulation_name: "serial_run_5k_debug"
+  author: "Author Name"
+  date: "2025-10-14"
+  notes: "Any notes about the simulation"
+
+solver:
+  max_iter: 15
+  top_n: 3
+  top_k_global: 3
+
+data:
+  # dataset_path: "../data/hla_alleles_smallDataset.csv"
+  dataset_path: "../data/simulated_HLA_samples_5000.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "serial"
+  num_workers: 1
+  
+logging:
+  verbose: true
+  enable_timing: true
+  progress_mode: progress_bar
+  log_dir: "../logs"
+
+warnings:
+  warn_process_pool_in_ipynb: true  

@@ -1,0 +1,22 @@
+# configs/parallel_process_pool_config.yaml
+
+solver:
+  max_iter: 10
+  top_n: 2
+  top_k_global: 5
+
+data:
+  dataset_path: "../data/hla_alleles_smallDataset.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "thread_pool"      # Use thread pool backend
+  num_workers: 4           # Set to 4 threads
+
+logging:
+  verbose: true
+  progress_mode: "silent"   # Options: progress_bar, per_worker, silent
+
+warnings:
+  warn_process_pool_in_ipynb: false  # Not applicable to threads, so disable
+

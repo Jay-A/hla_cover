@@ -1,0 +1,18 @@
+Configuration Files
+===================
+
+This directory contains example YAML configuration files for use with the solver.
+
+Example: :file:`prototype_ipynb_config.yaml <../configs/prototype_ipynb_config.yaml>`
+
+Contents
+--------
+
+- ``prototype_ipynb_config.yaml``: Template with all required fields and descriptions.
+
+Usage
+-----
+
+.. code-block:: bash
+
+    python run.py prototype_ipynb_config.yaml

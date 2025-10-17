@@ -1,0 +1,50 @@
+>type .gitignore
+# === Python artifacts ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# === Byte-compiled / packaging / distribution ===
+*.egg
+*.egg-info/
+dist/
+build/
+
+# === Virtual environments ===
+env/
+venv/
+.venv/
+*.env
+
+# === Sphinx documentation build ===
+docs/build/
+docs/source/generated/
+*.doctree
+*.pickle
+
+# === Notebook checkpoints ===
+.ipynb_checkpoints/
+
+# === IDE / Editor settings ===
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
+
+# === Test-related ===
+.cache/
+.pytest_cache/
+
+# === Log and temp files ===
+*.log
+*.tmp
+*.temp
+
+# === Jupyter notebook outputs (optional) ===
+*.nbconvert.ipynb

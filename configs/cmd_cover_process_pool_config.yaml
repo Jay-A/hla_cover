@@ -1,0 +1,30 @@
+# configs/parallel_process_pool_config.yaml
+
+meta:
+  simulation_name: "processpool_run_20k_debug"
+  author: "Author Name"
+  date: "2025-10-14"
+  notes: "Any notes about the simulation"
+
+solver:
+  max_iter: 15
+  top_n: 3
+  top_k_global: 3
+
+data:
+  # dataset_path: "../data/hla_alleles_smallDataset.csv"
+  dataset_path: "data/simulated_HLA_samples_20000.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "process_pool"       # ✅ Use process pool instead of thread pool
+  num_workers: 10             # Number of worker processes
+
+logging:
+  verbose: true
+  enable_timing: true
+  progress_mode: progress_bar
+  log_dir: "logs"
+
+warnings:
+  warn_process_pool_in_ipynb: true  # ✅ Helpful reminder if accidentally run in Jupyter

@@ -1,0 +1,26 @@
+# configs/parallel_thread_pool_config.yaml
+
+solver:
+  max_iter: 20
+  top_n: 3
+  top_k_global: 3
+
+data:
+  # dataset_path: "../data/hla_alleles_smallDataset.csv"
+  dataset_path: "data/simulated_HLA_samples_160000.csv"
+  number_doubles: 0
+
+parallel:
+  mode: "thread_pool"
+  num_workers: 6
+  local_bests_count: 3  
+
+logging:
+  verbose: true
+  enable_timing: true
+  progress_mode: progress_bar
+  log_dir: "logs"
+
+warnings:
+  warn_process_pool_in_ipynb: false  # Not applicable to threads, so disable
+
